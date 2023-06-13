@@ -36,7 +36,7 @@ flip <- function(imagedef){
 imagedef<-load.image("dog.jpeg")
 flippedIm <- flip(imagedef)
 
-# Let's plot size by side
+# Let's plot side by side
 par(mfrow = c(1,2))
 plot(imagedef,main = "default image")
 plot(flippedIm,main = "flipped image")
