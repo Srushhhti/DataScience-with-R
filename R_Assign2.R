@@ -9,8 +9,11 @@ library(MASS)
 data(iris)
 par(mfrow = c(1, 3))
 
+# compare the distribution of sepal lengths across different species (Sepal.Length ~ Species)
 boxplot(Sepal.Length ~ Species, data = iris, main = "Sepal Length", ylab = "Length")
+# similarly, compare the distribution of petal lengths across different species 
 boxplot(Petal.Length ~ Species, data = iris, main = "Petal Length", ylab = "Length")
+# similarly, compare the distribution of sepal widths across different species
 boxplot(Sepal.Width ~ Species, data = iris, main = "Sepal Width", ylab = "Width")
 
 plot(Sepal.Length ~ Petal.Length, data = iris, col = iris$Species, xlab = "Petal Length", ylab = "Sepal Length", main = "Scatterplot by Species")
@@ -44,9 +47,9 @@ plot(flippedIm,main = "flipped image")
 #--------------------------------------------------------------------------------------------------#
 #c question
 data(ships)
+#boxplot one of the best to see why B ship is the most dangerous
 boxplot(incidents ~ type, data = ships, main = "Incidents of all types of ships", ylab = "Incidents")
-#add more plots
-
+#add more plots...
 
 #--------------------------------------------------------------------------------------------------#
 #d question
