@@ -7,7 +7,7 @@ library(MASS)
 #--------------------------------------------------------------------------------------------------#
 #a question
 data(iris)
-par(mfrow = c(1, 3))
+par(mfrow = c(1, 4))
 
 # compare the distribution of sepal lengths across different species (Sepal.Length ~ Species)
 boxplot(Sepal.Length ~ Species, data = iris, main = "Sepal Length", ylab = "Length")
@@ -15,6 +15,9 @@ boxplot(Sepal.Length ~ Species, data = iris, main = "Sepal Length", ylab = "Leng
 boxplot(Petal.Length ~ Species, data = iris, main = "Petal Length", ylab = "Length")
 # similarly, compare the distribution of sepal widths across different species
 boxplot(Sepal.Width ~ Species, data = iris, main = "Sepal Width", ylab = "Width")
+# similarly, compare the distribution of petal widths across different species
+boxplot(Petal.Width ~ Species, data = iris, main = "Sepal Width", ylab = "Width")
+
 
 plot(Sepal.Length ~ Petal.Length, data = iris, col = iris$Species, xlab = "Petal Length", ylab = "Sepal Length", main = "Scatterplot by Species")
 legend("topright", legend = levels(iris$Species), col = 1:3, pch = 1)
